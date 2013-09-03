@@ -3,7 +3,7 @@ Contributors: zgordon
 Tags: widget, shortcode, badges, Treehouse, profile, API, learning, education
 Requires at least: 3.0.1
 Tested up to: 3.6
-Stable tag: 0.9
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -117,6 +117,10 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 
 == Changelog ==
 
+= 1.0 =
+
+* Optimized screenshots
+
 = 0.9 =
 
 * Initial launch of the plugin
@@ -125,6 +129,10 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 * Option to have a tooltip display showing information about each badge
 
 == Upgrade Notice ==
+
+= 1.0 = 
+
+* Updated the way the plugin is displayed on WordPress.org
 
 = 0.9 =
 
