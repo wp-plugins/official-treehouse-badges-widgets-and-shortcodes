@@ -127,4 +127,5 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 == Upgrade Notice ==
 
 = 0.9 =
-This is the first version of the plugin.  No updates available yet.
+
+* This is the first version of the plugin.  No updates available yet.
