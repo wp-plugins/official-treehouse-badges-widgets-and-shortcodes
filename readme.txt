@@ -1,5 +1,5 @@
 === Official Treehouse Badges Widget and Shortcode ===
-Contributors: zgordon
+Contributors: zgordon, treehousezac
 Tags: widget, shortcode, badges, Treehouse, profile, API, learning, education
 Requires at least: 3.0.1
 Tested up to: 3.6
