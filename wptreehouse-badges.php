@@ -234,15 +234,15 @@ add_action( 'wp_head', 'wptreehouse_badges_enable_frontend_ajax' );
 
 function wptreehouse_badges_backend_styles() {
 
-	wp_enqueue_style( 'wptreehouse_badges_backend_css', plugins_url( 'wptreehouse-badges/wptreehouse-badges.css' ) );
+	wp_enqueue_style( 'wptreehouse_badges_backend_css', plugins_url( 'official-treehouse-badges-widgets-and-shortcodes/wptreehouse-badges.css' ) );
 
 }
 add_action( 'admin_head', 'wptreehouse_badges_backend_styles' );
 
 function wptreehouse_badges_frontend_scripts_and_styles() {
 
-	wp_enqueue_style( 'wptreehouse_badges_frontend_css', plugins_url( 'wptreehouse-badges/wptreehouse-badges.css' ) );
-	wp_enqueue_script( 'wptreehouse_badges_frontend_js', plugins_url( 'wptreehouse-badges/wptreehouse-badges.js' ), array('jquery'), '', true );
+	wp_enqueue_style( 'wptreehouse_badges_frontend_css', plugins_url( 'official-treehouse-badges-widgets-and-shortcodes/wptreehouse-badges.css' ) );
+	wp_enqueue_script( 'wptreehouse_badges_frontend_js', plugins_url( 'official-treehouse-badges-widgets-and-shortcodes/wptreehouse-badges.js' ), array('jquery'), '', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'wptreehouse_badges_frontend_scripts_and_styles' );
