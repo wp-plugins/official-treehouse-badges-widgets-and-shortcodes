@@ -4,7 +4,7 @@
  *	Plugin Name: Official Treehouse Badges Widgets and Shortcodes
  *	Plugin URI: http://wptreehouse.com/wptreehouse-badges/
  *	Description: Provides both widgets and shortcodes to help you display your Treehouse profile badges on your website.  Official Treehouse widgets and shortcodes from Treehouse.
- *	Version: 1.0
+ *	Version: 1.1
  *	Author: Zac Gordon
  *	Author URI: http://wp.zacgordon.com
  *	License: GPL2
