@@ -42,7 +42,7 @@
 				<?php endif; ?>
 
 				<a href="http://teamtreehouse.com" alt="Team Treehouse | A Better Way to Learn Technology" class="wptreehouse-logo">
-					<img src="<?php echo plugins_url( 'wptreehouse-badges/images/treehouse-logo.png' ); ?>" alt="Treehouse" />
+					<img src="<?php echo plugins_url( 'official-treehouse-badges-widgets-and-shortcodes/images/treehouse-logo.png' ); ?>" alt="Treehouse" />
 				</a>
 					
 				<span class="wptreehouse-tooltip bottom"></span>							
