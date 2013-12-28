@@ -120,6 +120,7 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 = 1.1 = 
 
 * Fixed CSS link issue
+* Fixed logo link issue
 
 = 1.0 =
 
