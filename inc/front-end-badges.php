@@ -65,6 +65,7 @@
 
 
 	<?php $j = $random_badge_array[$i]; ?>
+	<?php if(isset($wptreehouse_profile->{'badges'}[$j])): ?>
 
 	<li class="wptreehouse-badge">
 
@@ -104,6 +105,8 @@
 
 
 	</li>
+	<?php endif; ?>
+
 
 	<?php endfor; ?>
 	<?php endif; ?>
