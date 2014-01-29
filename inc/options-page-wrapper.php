@@ -166,6 +166,25 @@
 						</div> <!-- .inside -->
 						
 					</div> <!-- .postbox -->
+
+					<div class="postbox">
+					
+						<h3><span>Treehouse Affiliate Widget</span></h3>
+						<div class="inside">
+							
+
+							<p><img style="width: 100%" src="http://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/content/referral-badge-green.png"/></p>
+							
+
+							<p>For every person who joins Treehouse, we will give you 20% off your monthly bill. If five people join, that’s 100% off your individual membership!</p>
+							
+
+							<p><strong>Find your Treehouse Affiliate Widgets under the widgets section of the admin area.</strong></p>
+							
+
+						</div> <!-- .inside -->
+						
+					</div> <!-- .postbox -->					
 					
 					<?php endif; ?>
 

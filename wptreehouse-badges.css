@@ -164,3 +164,7 @@
 .widget-area .widget .treehouse-badge-info .treehouse-logo img {
 	display: block;
 } 
+
+img.wptreehouse-affiliate {
+	width: 100%;
+}

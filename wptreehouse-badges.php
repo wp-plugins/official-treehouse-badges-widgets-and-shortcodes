@@ -4,7 +4,7 @@
  *	Plugin Name: Official Treehouse Badges Widgets and Shortcodes
  *	Plugin URI: http://wptreehouse.com/wptreehouse-badges/
  *	Description: Provides both widgets and shortcodes to help you display your Treehouse profile badges on your website.  Official Treehouse widgets and shortcodes from Treehouse.
- *	Version: 1.2
+ *	Version: 1.3
  *	Author: Zac Gordon
  *	Author URI: http://wp.zacgordon.com
  *	License: GPL2
@@ -50,7 +50,7 @@ function wptreehouse_badges_options_page() {
 
 	if( !current_user_can( 'manage_options' ) ) {
 
-		wp_die( 'You do not have suggicient permissions to access this page.' );
+		wp_die( 'You do not have sufficient permissions to access this page.' );
 
 	}
 
@@ -111,11 +111,16 @@ class Wptreehouse_Badges_Widget extends WP_Widget {
 		$title = apply_filters( 'widget_title' , $instance['title'] );
 		$num_badges = $instance['num_badges'];
 		$display_tooltip = $instance['display_tooltip'];
+		$display_random = $instance['display_random'];
 
 		$options = get_option( 'wptreehouse_badges' );
 		$wptreehouse_profile = $options['wptreehouse_profile'];
 
-		require( 'inc/front-end.php' );
+		if( $display_random == 1 ) {
+			$random_badge_array = get_random_badge_array( 0, count( $wptreehouse_profile->{'badges'} ), $num_badges );
+		}
+
+		require( 'inc/front-end-badges.php' );
 
 	}
 
@@ -126,6 +131,7 @@ class Wptreehouse_Badges_Widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		$instance['num_badges'] = strip_tags($new_instance['num_badges']);
 		$instance['display_tooltip'] = strip_tags($new_instance['display_tooltip']);
+		$instance['display_random'] = strip_tags($new_instance['display_random']);
 		
 		return $instance;
 	}
@@ -133,20 +139,66 @@ class Wptreehouse_Badges_Widget extends WP_Widget {
 	function form( $instance ) {
 		// Output admin widget options form
 
-		$title = esc_attr($instance['title']);
-		$num_badges = esc_attr($instance['num_badges']);
-		$display_tooltip = esc_attr($instance['display_tooltip']);
+		$title 		= ( isset($instance['title']) ? esc_attr($instance['title']) : null );
+		$num_badges = ( isset($instance['num_badges']) ? esc_attr($instance['num_badges']) : null );
+		$display_tooltip = ( isset($instance['display_tooltip']) ? esc_attr($instance['display_tooltip']) : null );	
+		$display_random = ( isset($instance['display_random']) ? esc_attr($instance['display_random']) : null );	
+		
 
 		$options = get_option( 'wptreehouse_badges' );
 		$wptreehouse_profile = $options['wptreehouse_profile'];
 
-		require( 'inc/widget-fields.php' );
+		require( 'inc/widget-fields-badges.php' );
 
+	}
+}
+
+class Wptreehouse_Affiliates_Widget extends WP_Widget {
+
+	function wptreehouse_affiliates_widget() {
+		// Instantiate the parent object
+		parent::__construct( false, 'Treehouse Affiliate Widget' );
+	}
+
+	function widget( $args, $instance ) {
+		// Widget output
+
+		extract( $args );
+		$title = apply_filters( 'widget_title' , $instance['title'] );
+		$custom_message = $instance['custom_message'];
+
+		$options = get_option( 'wptreehouse_badges' );
+
+		require( 'inc/front-end-affiliate.php' );
+
+	}
+
+	function update( $new_instance, $old_instance ) {
+		// Save widget options
+		
+		$instance = $old_instance;
+		$instance['title'] = strip_tags($new_instance['title']);
+		$instance['custom_message'] = strip_tags($new_instance['custom_message']);
+		
+		return $instance;
+	}
+
+	function form( $instance ) {
+		// Output admin widget options form
+
+		$title 	= ( isset($instance['title']) ? esc_attr($instance['title']) : null );			
+		$custom_message = ( isset($instance['custom_message']) ? esc_attr($instance['custom_message']) : null );
+
+		$options = get_option( 'wptreehouse_badges' );
+		
+		require( 'inc/widget-fields-affiliate.php' );
+	
 	}
 }
 
 function wptreehouse_badges_register_widgets() {
 	register_widget( 'Wptreehouse_Badges_Widget' );
+	register_widget( 'Wptreehouse_Affiliates_Widget' );
 }
 
 add_action( 'widgets_init', 'wptreehouse_badges_register_widgets' );
@@ -158,20 +210,31 @@ function wptreehouse_badges_shortcode( $atts, $content = null ) {
 
 	extract( shortcode_atts( array(
 		'num_badges' => '8',
-		'tooltip' => 'on'
+		'tooltip' => 'on',
+		'random' => 'off'
 	), $atts ) );
 
 	if( $tooltip == 'on' ) $tooltip = 1;
 	if( $tooltip == 'off' ) $tooltip = 0;
 
+	if( $random == 'true' ) $random = 1;
+	if( $random == 'on' ) $random = 1;
+	if( $random == 'false' ) $random = 0;
+	if( $random == 'off' ) $random = 0;
+
 	$display_tooltip = $tooltip;
+	$display_random = $random;	
 
 	$options = get_option( 'wptreehouse_badges' );
 	$wptreehouse_profile = $options['wptreehouse_profile'];
 
+	if( $display_random == 1 ) {
+		$random_badge_array = get_random_badge_array( 0, count( $wptreehouse_profile->{'badges'} ), $num_badges );
+	}
+
 	ob_start();
 
-	require( 'inc/front-end.php' );
+	require( 'inc/front-end-badges.php' );
 
 	$content = ob_get_clean();
 
@@ -191,6 +254,14 @@ function wptreehouse_badges_get_profile( $wptreehouse_username ) {
 	$wptreehouse_profile = json_decode( $json_feed['body'] );
 
 	return $wptreehouse_profile;
+
+}
+
+function get_random_badge_array($min, $max, $quantity) {
+
+	$numbers = range($min, $max);
+	shuffle($numbers);
+	return array_slice($numbers, 0, $quantity);	
 
 }
 

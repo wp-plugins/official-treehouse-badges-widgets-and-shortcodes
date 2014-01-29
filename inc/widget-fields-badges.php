@@ -15,3 +15,7 @@
   <label>Display tooltips?</label> 
   <input type="checkbox" name="<?php echo $this->get_field_name('display_tooltip'); ?>" value="1" <?php checked( $display_tooltip, 1 ); ?> />
 </p>
+<p>
+  <label>Display random order?</label> 
+  <input type="checkbox" name="<?php echo $this->get_field_name('display_random'); ?>" value="1" <?php checked( $display_random, 1 ); ?> />
+</p>

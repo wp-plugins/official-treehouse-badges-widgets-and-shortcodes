@@ -3,7 +3,7 @@ Contributors: zgordon, treehousezac
 Tags: widget, shortcode, badges, Treehouse, profile, API, learning, education
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 1.2
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,7 +19,9 @@ This plugin allows you to show off the badges from your Treehouse profile and di
 1. Number of Badges - Choose how many of your recent badges you would like to display
 2. Tooltip - An optional tooltip with the name of the badge and the related course
 
-This is the official badges plugin for Treehouse and was created along with a video series on How to Build a WordPress Plugin.
+Along with these features, the plugin also includes an affiliate widget so you can encourage people to sign up at Treehouse and get a discount off your monthly membership.
+
+This is the official badges plugin for Treehouse and was created along with a video series on How to Build a WordPress Plugin.  
 
 == Installation ==
 
@@ -41,7 +43,7 @@ There are a few options for installing and setting up this plugin.
 1. Find your Treehouse username (see instructions under FAQ).
 2. In the WordPress admin area go to Settings > Treehouse Badges and then enter in your username
 
-= How to Use the Widget =
+= How to Use the Badges Widget =
 
 1. Setup the Plugin (refer to above)
 2. Go to Appearance > Widgets and drag the 'Treehouse Badges Widget' to your sidebar.  
@@ -54,9 +56,15 @@ There are a few options for installing and setting up this plugin.
 1. Navigate to the post or page you would like to add the badges to
 2. Enter in the shortcode [wptreehouse_badges]
 3. Customize the number of badges displayed by adding a the parameter 'num_badges' with the number of badges you want to display. [wptreehouse_badges num_badges='4'].  By default, 8 badges are displayed.
-4. Customize whether a tooltip will appear along with the badges by useing the parameter 'tooltip' with a value of 'on' or 'off' [wptreehouse_badges tooltip='off'].  By default the tooltip has an 'on' setting.
-5. You can use both parameters together like so [wptreehouse_badges num_badges='4' tooltip='off']
+4. Customize whether a tooltip will appear along with the badges by using the parameter 'tooltip' with a value of 'on' or 'off' [wptreehouse_badges tooltip='off'].  By default the tooltip has an 'on' setting.
+4. If you want to display a random selection of badges then use the parameter 'random' with a value of 'on' or 'off' [wptreehouse_badges random='on'].  By default the tooltip has an 'off' setting.
+5. You can use any of the parameters together like so [wptreehouse_badges num_badges='4' tooltip='off']
 
+= How to Use the Affiliate Widget =
+
+1. Setup the Plugin (refer to above)
+2. Go to Appearance > Widgets and drag the 'Treehouse Affiliate Widget' to your sidebar.  
+3. Enter in a Title to appear above the badges.  For example "Join Treehouse"
 
 == Frequently Asked Questions ==
 
@@ -99,7 +107,7 @@ Whenever someone visits a page, the plugin checks to see if the profile informat
 
 = Can I Choose What Specific Badges I Want to Display? =
 
-Unfortunately, not yet.  For future releases, we are considering more customized ways to choose what badges you want to display, instead of just showing the most recent badges.
+Unfortunately, not yet.  For future releases, we are considering more customized ways to choose what badges you want to display, instead of just showing the most recent badges.  However, we recently released the ability to display random images.
 
 
 
@@ -110,12 +118,18 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 2. Type in your Treehouse username (see FAQ for how to find your username)
 3. Preview your latest badges and your profile information
 4. To add a widget to your site go to Appearance > Widgets.  Look for the 'Official Treehouse Badges Plugin' widget and drag to the appropraite widget area.  Enter in a title to appear above the badges, enter in the number of badges you would like to appear, check or uncheck the tooltip option to have a tooltip display with more information about each badge
-5. To add badges using a shortcode use [wptreehouse_badges].  You can also use the following optional parameters [wptreehouse_badges num_badges="4" tooltip="off"].  By default it displays 8 badges with the tooltip set to 'on.'
+5. To add badges using a shortcode use [wptreehouse_badges].  You can also use the following optional parameters [wptreehouse_badges num_badges="4" tooltip="off" random="on"].  By default it displays 8 badges with the tooltip set to 'on' and random is set to 'off.'
 6. A preview of the badges displaying as a widget
 7. A preview of the badges displaying as a shortcode
 8. A preview of the tooltip 
 
 == Changelog ==
+
+= 1.3 = 
+
+* Added ability to display badges in random order
+* Added Treehouse Affiliate Widget
+* Fixed spelling mistake on error message
 
 = 1.2 = 
 
@@ -137,6 +151,11 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 * Option to have a tooltip display showing information about each badge
 
 == Upgrade Notice ==
+
+= 1.3 = 
+
+* Added ability to display random badges, added affiliate widget
+
 
 = 1.1 = 
 
