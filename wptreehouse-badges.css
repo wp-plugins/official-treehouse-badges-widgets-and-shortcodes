@@ -4,11 +4,11 @@
  *
 */
 
-.postbox img.gravatar {
+.wptreehouse-badges-plugin .postbox img.gravatar {
 	max-width: 100%;
 }
 
-.postbox .inside {
+.wptreehouse-badges-plugin .postbox .inside {
 	display: table
 }
 
