@@ -1,4 +1,4 @@
-<div class="wrap">
+<div class="wrap wptreehouse-badges-plugin">
 	
 	<div id="icon-options-general" class="icon32"></div>
 	<h2>The Official Treehouse Badges Widgets and Shortcodes</h2>

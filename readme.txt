@@ -3,7 +3,7 @@ Contributors: zgordon, treehousezac
 Tags: widget, shortcode, badges, Treehouse, profile, API, learning, education
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 1.3
+Stable tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -125,6 +125,10 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 
 == Changelog ==
 
+= 1.4 = 
+
+* Fixed admin CSS compatibility issue
+
 = 1.3 = 
 
 * Added ability to display badges in random order
@@ -151,6 +155,10 @@ Unfortunately, not yet.  For future releases, we are considering more customized
 * Option to have a tooltip display showing information about each badge
 
 == Upgrade Notice ==
+
+= 1.3 = 
+
+* Fixed CSS compatibility issue with other admin settings pages
 
 = 1.3 = 
 
