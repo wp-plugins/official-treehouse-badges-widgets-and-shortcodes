@@ -5,7 +5,7 @@
 
 ?>
 
-<p><a href="http://referrals.trhou.se/<?php echo $options['wptreehouse_username']; ?>" target="_blank"><img class="wptreehouse-affiliate" src="http://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/content/referral-badge-green.png"/></a></p>
+<p><a href="http://referrals.trhou.se/<?php echo $options['wptreehouse_username']; ?>" target="_blank"><img class="wptreehouse-affiliate" src="https://static.teamtreehouse.com/assets/content/referral-badge-grn.png"/></a></p>
 <p><?php echo $custom_message; ?></p>							
 
 
