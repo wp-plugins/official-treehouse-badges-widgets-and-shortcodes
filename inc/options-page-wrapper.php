@@ -173,7 +173,7 @@
 						<div class="inside">
 							
 
-							<p><img style="width: 100%" src="http://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/content/referral-badge-green.png"/></p>
+							<p><img style="width: 100%" src="://static.teamtreehouse.com/assets/content/referral-badge-grn.png"/></p>
 							
 
 							<p>For every person who joins Treehouse, we will give you 20% off your monthly bill. If five people join, that’s 100% off your individual membership!</p>
